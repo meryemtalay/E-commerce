@@ -48,14 +48,14 @@ const Header = ()=> {
       </div>
       <div className='col-5'>
         <div className='header-upper-links d-flex align-items-center justify-content-between'>
-            {/* <div>
-              <Link>
-              <img src="images/compare.svg" alt=""/>
-              <p>Compare <br />  Products</p>
-              </Link>
-            </div> */}
             <div>
-              <Link className='d-flex align-items-center gap-10 text-white'>
+              <Link to="/compare-product" className='d-flex align-items-center gap-10 text-white'>
+              <img src="images/compare.svg" alt=""/>
+              <p>Ürün <br />  Karşılaştırma</p>
+              </Link>
+            </div>
+            <div>
+              <Link to="/whishlist" className='d-flex align-items-center gap-10 text-white'>
               <img src="images/wishlist.svg" alt="whislist"/>
               <p className='mb-0'>
                 Favori <br />  Ürünlerim
@@ -63,13 +63,13 @@ const Header = ()=> {
               </Link>
             </div>
             <div>
-              <Link className='d-flex align-items-center gap-10 text-white'>
+              <Link to="/login"className='d-flex align-items-center gap-10 text-white'>
               <img src="images/user.svg" alt="user"/>
               <p className='mb-0'>Kullanıcı<br />  Girişi</p>
               </Link>
             </div>
             <div>
-              <Link className='d-flex align-items-center gap-10 text-white'>
+              <Link to="/cart" className='d-flex align-items-center gap-10 text-white'>
               <img src="images/cart.svg" alt="cart"/>
               <div className='d-flex flex-column gap-10'>
                 <span className='badge bg-white text-dark'>0</span>
@@ -108,7 +108,7 @@ const Header = ()=> {
                 <div className='d-flex align-items-center gap-15'>
                   <NavLink to="/">Anasayfa</NavLink>
                   <NavLink to="/store">Mağazamız</NavLink>
-                  <NavLink to="/">Blog</NavLink>
+                  <NavLink to="/blogs">Blog</NavLink>
                   <NavLink to="/contact">İLETİŞİM</NavLink>
 
                 </div>

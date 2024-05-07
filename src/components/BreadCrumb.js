@@ -11,7 +11,7 @@ const BreadCrumb = (props) => {
                 <div className="col-12 d-flex justify-content-center align-items-center">
                     <p className='text-center'>
                         <Link to="/" className='text-dark'>
-                            Home &nbsp;
+                            Anasayfa &nbsp;
                         </Link>
                         / {title}
                     </p>

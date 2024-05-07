@@ -51,11 +51,11 @@ const Header = ()=> {
             <div>
               <Link to="/compare-product" className='d-flex align-items-center gap-10 text-white'>
               <img src="images/compare.svg" alt=""/>
-              <p>Ürün <br />  Karşılaştırma</p>
+              <p>Ürünleri <br />  Karşılaştırın</p>
               </Link>
             </div>
             <div>
-              <Link to="/whishlist" className='d-flex align-items-center gap-10 text-white'>
+              <Link to="/wishlist" className='d-flex align-items-center gap-10 text-white'>
               <img src="images/wishlist.svg" alt="whislist"/>
               <p className='mb-0'>
                 Favori <br />  Ürünlerim
@@ -110,6 +110,7 @@ const Header = ()=> {
                   <NavLink to="/store">Mağazamız</NavLink>
                   <NavLink to="/blogs">Blog</NavLink>
                   <NavLink to="/contact">İLETİŞİM</NavLink>
+                  
 
                 </div>
               </div>

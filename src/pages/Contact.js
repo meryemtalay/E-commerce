@@ -6,8 +6,8 @@ import { BiPhoneCall, BiInfoCircle } from 'react-icons/bi'
 const Contact=()=> {
   return (
     <>
-    <Meta title={"Contact Us"} />
-    <BreadCrumb title="Contact" />
+    <Meta title={"Bizimle İletişime Geçin"} />
+    <BreadCrumb title="İletişim" />
 
     <div className="contact-wrapper py-5 home-wrapper-2">
     <div className="container-xxl">

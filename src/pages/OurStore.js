@@ -3,14 +3,15 @@ import BreadCrumb from '../components/BreadCrumb'
 import Meta from '../components/Meta'
 import ReactStars from 'react-rating-stars-component'
 import ProductCard from "../components/ProductCard"
+import Color from '../components/Color'
 
 
 const OurStore = () => {
   const [grid,setGrid]=useState(4);
   return (    
     <>
-        <Meta title={"Our Store"} />
-        <BreadCrumb title="Our Store"/>
+        <Meta title={"Mağaza"} />
+        <BreadCrumb title="Mağaza"/>
         <div className='store-wrapper home-wrapper-2 py-5'>
           <div className='container-xxl'>
             <div className='row'>
@@ -58,20 +59,7 @@ const OurStore = () => {
                   <h5 className="sub-title">Renk</h5>
                     <div>
                   
-                      <ul className='colors ps-0'>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                      </ul>
+                     <Color />
                     </div>
                   <h5 className="sub-title">Boyut</h5>
                     <div>

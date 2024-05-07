@@ -11,7 +11,7 @@ const BlogCard = ()=> {
         <p className="date">29 Mart 2024</p>
         <h5 className="title"> <b>Avize Trendleri 2024:</b> <br></br>Ev Tasarımınızı Yenilemek İçin Yeni Fikirler	</h5>
         <p className="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <Link to="/"className='button'>Daha fazla</Link>
+        <Link to="blog/:id"className='button'>Daha fazla</Link>
       </div>
     </div>
   );

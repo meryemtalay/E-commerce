@@ -2,13 +2,15 @@ import React from 'react'
 import Meta from '../components/Meta'
 import BreadCrumb from '../components/BreadCrumb'
 import { Link } from 'react-router-dom'
+import Container from '../components/Container'
+import CustomInput from '../components/CustomInput'
 const Forgotpassword = () => {
   return (
     <>
         <Meta title={"Şifremi unuttum"} />
         <BreadCrumb title="Şifremi unuttum"/>
 
-        <div className="login-wrapper py-5 home-wrapper-2">
+        <Container class1="login-wrapper py-5 home-wrapper-2">
             <div className="row">
                 <div className="col-12">
                     <div className="auth-card">
@@ -17,10 +19,8 @@ const Forgotpassword = () => {
                           Şifreni sıfırlaman için sana mail göndereceğiz.
                         </p>
                         <form action='' className='d-flex flex-column gap-15'>
-                            <div>
-                                <input type="email" name='email' placeholder='Email' className="form-control" />
-                            </div>
-
+                            <CustomInput type="email" name='email' placeholder='Email'/>
+                            
                             <div>
                                 <div className='mt-3 d-flex justify-content-center flex-column gap-15 align-items-center'>
                                     <button className='button border-0' type='submit'>Gönder</button>
@@ -31,7 +31,7 @@ const Forgotpassword = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Container>
     </>
   )
 }

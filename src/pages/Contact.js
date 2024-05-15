@@ -3,14 +3,14 @@ import Meta from  '../components/Meta'
 import BreadCrumb from '../components/BreadCrumb'
 import {AiOutlineHome, AiOutlineMail} from "react-icons/ai"
 import { BiPhoneCall, BiInfoCircle } from 'react-icons/bi'
+import Container from '../components/Container'
 const Contact=()=> {
   return (
     <>
     <Meta title={"Bizimle İletişime Geçin"} />
     <BreadCrumb title="İletişim" />
 
-    <div className="contact-wrapper py-5 home-wrapper-2">
-    <div className="container-xxl">
+    <Container class1="contact-wrapper py-5 home-wrapper-2">
       <div className="row">
         <div className="col-12">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.9963405375156!2d41.490950399999996!3d38.7408462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4072e5cd5932a2e7%3A0x3db2dbd0a23520a!2zTXXFnyBMYWxlZ8O8bCBBdml6ZQ!5e0!3m2!1str!2str!4v1714868708183!5m2!1str!2str" width="600" height="450" className='border-0 w-100' allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
@@ -65,8 +65,7 @@ const Contact=()=> {
           </div>
         </div>
       </div>
-    </div>
-    </div>
+    </Container>
     </>
   )
 }

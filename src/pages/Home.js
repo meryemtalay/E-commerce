@@ -5,82 +5,94 @@ import BlogCard from '../components/BlogCard';
 import ProductCard from '../components/ProductCard';
 // import {BlogCard1,BlogCard2,BlogCard3,BlogCard4} from  '../components/BlogCard';
 import SpecialProduct from "../components/SpecialProduct";
+import Container from '../components/Container';
+import { services } from '../utils/Data';
 const Home = () => {
   return ( 
     <>
-  <section className='home-wrapper-1 py-5'>
-    <div className='container-xxl'>
+    <Container class1="home-wrapper-1 py-5">
       <div className='row'>
-        <div className='col-6'>
-          <div className='main-banner position-relative '>
-            <img src="images/adminn.png" className="img-fluid rounded-3" alt="main banner" 
-            />
-            <div className='main-banner-content position-absolute'>
-              <h4>deneme</h4>
-              <h5>Burada</h5>
-              <p>fromfeo dfdf</p>
-              <Link className='button'>Şimdi Satın al</Link>
-            </div>
-          </div>
-          </div>
           <div className='col-6'>
-            <div className='d-flex flex-wrap gap-10 justify-content-between align-items-center'>
+            <div className='main-banner position-relative '>
+              <img src="images/adminn.png" className="img-fluid rounded-3" alt="main banner" 
+              />
+              <div className='main-banner-content position-absolute'>
+                <h4>deneme</h4>
+                <h5>Burada</h5>
+                <p>fromfeo dfdf</p>
+                <Link className='button'>Şimdi Satın al</Link>
+              </div>
+            </div>
+            </div>
+            <div className='col-6'>
+              <div className='d-flex flex-wrap gap-10 justify-content-between align-items-center'>
+                  <div className='small-banner position-relative'>
+                  <img src="images/dnm1.png" 
+                  className="img-fluid rounded-3" 
+                  alt="main banner" 
+                  />
+                  <div className='small-banner-content position-absolute'>
+                    <h4>İndirim!</h4>
+                    <h5>Avize</h5>
+                    <p>%10 indirimi<br /> Kaçırma</p>
+                  </div>
+                </div>
                 <div className='small-banner position-relative'>
-                <img src="images/dnm1.png" 
-                className="img-fluid rounded-3" 
-                alt="main banner" 
-                />
-                <div className='small-banner-content position-absolute'>
-                  <h4>İndirim!</h4>
-                  <h5>Avize</h5>
-                  <p>%10 indirimi<br /> Kaçırma</p>
+                  <img src="images/dnm2.png" 
+                  className="img-fluid rounded-3" 
+                  alt="main banner" 
+                  />
+                  <div className='small-banner-content position-absolute'>
+                    <h4>Yeni gelenler</h4>
+                    <h5>Yeni Gelen</h5>
+                    <p>Kaçırılmayacak<br /> Fırsatlar!</p>
+                  </div>
                 </div>
-              </div>
-              <div className='small-banner position-relative'>
-                <img src="images/dnm2.png" 
-                className="img-fluid rounded-3" 
-                alt="main banner" 
-                />
-                <div className='small-banner-content position-absolute'>
-                  <h4>Yeni gelenler</h4>
-                  <h5>Yeni Gelen</h5>
-                  <p>Kaçırılmayacak<br /> Fırsatlar!</p>
+                <div className='small-banner position-relative'>
+                  <img src="images/dnm3.png" 
+                  className="img-fluid rounded-3" 
+                  alt="main banner" 
+                  />
+                  <div className='small-banner-content position-absolute'>
+                    <h4>Yeni gelenler</h4>
+                    <h5>Modern Aplikler</h5>
+                    <p>aplik<br /> test</p>
+                  </div>
                 </div>
-              </div>
-              <div className='small-banner position-relative'>
-                <img src="images/dnm3.png" 
-                className="img-fluid rounded-3" 
-                alt="main banner" 
-                />
-                <div className='small-banner-content position-absolute'>
-                  <h4>Yeni gelenler</h4>
-                  <h5>Modern Aplikler</h5>
-                  <p>aplik<br /> test</p>
-                </div>
-              </div>
-              <div className='small-banner position-relative p-3'>
-                <img src="images/dnm4.png" 
-                className="img-fluid rounded-3" 
-                alt="main banner" 
-                />
-                <div className='small-banner-content position-absolute'>
-                  <h4>Yeni gelenler</h4>
-                  <h5>En Uygun</h5>
-                  <p>Lambader Çeşitleri <br />dfdf</p>
+                <div className='small-banner position-relative p-3'>
+                  <img src="images/dnm4.png" 
+                  className="img-fluid rounded-3" 
+                  alt="main banner" 
+                  />
+                  <div className='small-banner-content position-absolute'>
+                    <h4>Yeni gelenler</h4>
+                    <h5>En Uygun</h5>
+                    <p>Lambader Çeşitleri <br />dfdf</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        
-      </div>  
-    </div>
-  </section> 
-  <section className='home-wrapper-2 py-5'>
-    <div className='container-xxl'>
-      <div className='row'>
+          
+      </div>
+    </Container>
+    <Container class1="home-wrapper-2 py-5">
+    <div className='row'>
         <div className='col-12'>
           <div className='services d-flex align-items-center justify-content-between'>
-            <div className='d-flex align-items-center gap-10'>
+              {services?.map((i,j) => {
+                  return (
+                    <div className='d-flex align-items-center gap-15' key={j}>
+                      <img src={i.image} alt="services"/>
+                      <div>
+                        <h6>{i.title}</h6>
+                        <p className='mb-0'>{i.tagline}</p>
+                      </div>
+                    </div>
+                  );
+                })
+              }
+            
+            {/* <div className='d-flex align-items-center gap-10'>
               <img src="images/service.png" alt="services"/>
               <div>
                 <h6>Bedava Kargo</h6>
@@ -114,16 +126,14 @@ const Home = () => {
                 <h6>Güvenli Ödeme</h6>
                 <p className='mb-0'>%100 Güvenli Ödeme</p>
               </div>
-            </div>
+            </div> */}
 
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section className='home-wrapper-2 py-5'>
-  <div className='container-xxl'>
-      <div className='row'>
+    </Container>
+    <Container class1="home-wrapper-2 py-5">
+    <div className='row'>
         <div className='col-12'>
             <div className='categories d-flex justify-content-between flex-wrap align-items-center'>
             <div className='d-flex align-items-center'>
@@ -185,11 +195,16 @@ const Home = () => {
             </div>
         </div>
       </div>
-  </div>        
-  </section>
-  <section className='featured-wrapper py-5 home-wrapper-2'>
-    <div className="container-xxl">
-      <div className="row">
+    </Container>
+  
+  {/* <section className='home-wrapper-2 py-5'>
+    <div className='container-xxl'>
+      
+    </div>
+  </section> */}
+  
+  <Container class1='featured-wrapper py-5 home-wrapper-2'>
+    <div className="row">
         <div className="col-12">
           <h3 className="section-heading">Featured Collection</h3>
         </div>
@@ -199,10 +214,9 @@ const Home = () => {
         <ProductCard />
 
       </div>
-    </div>
-  </section> 
-  <section className="famous-wrapper py-5 home-wrapper-2">
-    <div className="container-xxl">
+    
+  </Container> 
+  <Container class1="famous-wrapper py-5 home-wrapper-2">
       <div className="row">
         <div className="col-3">
           <div className="famous-card position-relative">
@@ -260,10 +274,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section className='special-wrapper py-5 home-wrapper-2'>
-    <div className="container-xxl">
+  </Container>
+  <Container class1='special-wrapper py-5 home-wrapper-2'>
     <div className='row'>
     <div className="col-12">
           <h3 className="section-heading">Special Products</h3>
@@ -274,11 +286,9 @@ const Home = () => {
       <SpecialProduct />
       <SpecialProduct />
     </div>
-    </div>
 
-  </section>
-  <section className='popular-wrapper py-5 home-wrapper-2'>
-    <div className="container-xxl">
+  </Container>
+  <Container class1='popular-wrapper py-5 home-wrapper-2'>
       <div className="row">
         <div className="col-12">
           <h3 className="section-heading">Çok Satanlar</h3>
@@ -297,10 +307,8 @@ const Home = () => {
         <ProductCard />
 
       </div>
-    </div>
-  </section> 
-  <section className='marwque-wrapper home-wrapper-2 py-5'>
-    <div className='container-xxl'>
+  </Container> 
+  <Container class1='marwque-wrapper home-wrapper-2 py-5'>
       <div className='row'>
       <div className='col-12'>
         <div className='marquee-inner-wrapper card-wrapper'>
@@ -325,10 +333,8 @@ const Home = () => {
         </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section className='blog-wrapper py-5 home-wrapper-2'>
-    <div className="container-xxl">
+  </Container>
+  <Container class1='blog-wrapper py-5 home-wrapper-2'>
       <div className="row">
         <div className="col-12">
           <h3 className="section-heading">En Yeni Bloglarımız</h3>
@@ -353,8 +359,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
-  </section>
+  </Container>
   </>
 );
 };

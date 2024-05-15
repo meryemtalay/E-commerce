@@ -14,6 +14,8 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Resetpassword from "./pages/Resetpassword";
 import SingleBlog from "./pages/SingleBlog";
+import Cart from "./pages/Cart";
+import CompleteOrder from "./pages/CompleteOrder";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import RefundPolicy from "./pages/RefundPolicy";
 import ShippingPolicy from "./pages/ShippingPolicy";
@@ -24,6 +26,7 @@ function App() {
       <>
         <BrowserRouter>
           <Routes>
+            {/* element kısmı dosya isimlerini, path kısımları da urli söyler */}
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="about" element={<About />} />
@@ -32,6 +35,8 @@ function App() {
               <Route path="product/:id" element={<SingleProduct />} />                       
               <Route path="blogs" element={<Blog />} />            
               <Route path="blog/:id" element={<SingleBlog />} />            
+              <Route path="cart" element={<Cart />} />            
+              <Route path="complete-order" element={<CompleteOrder />} />            
               <Route path="compare-product" element={<CompareProduct />} />            
               <Route path="wishlist" element={<Wishlist />} />            
               <Route path="login" element={<Login />} />            

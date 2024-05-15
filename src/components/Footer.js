@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { LuInstagram } from "react-icons/lu";
 import { BsInstagram } from 'react-icons/bs';
+import newsletter from  "../images/newsletter.png"
 
 
 
@@ -13,7 +14,7 @@ const Footer = () => {
           <div className='row align-items-center'>
             <div className='col-5'>
               <div className='footer-top-data d-flex gap-30 align-items-center'>
-                <img src='images/newsletter.png' alt='newsletter'></img>
+                <img src={newsletter} alt='newsletter'></img>
                 <h2 className='mb-0 text-white'>Ürünlerden haberdar olun</h2>
               </div>
             </div>
@@ -26,7 +27,8 @@ const Footer = () => {
                 aria-label="Email adresiniz.." 
                 aria-describedby="basic-addon2" 
                 />
-                <span class="input-group-text p-2" id="basic-addon2">
+                
+                <span className="input-group-text p-2" id="basic-addon2">
                   Subscribe
                 </span>
             </div>
@@ -93,7 +95,7 @@ const Footer = () => {
           <div className='row'>
             <div className='col-12'>
               <p className='text-center mb-0 text-white'>
-                &copy: {new Date().getFullYear}; Powered by Meryem  
+                &copy: {new Date().getFullYear()}; Powered by Meryem  
               </p>
             </div>
           </div>

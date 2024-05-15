@@ -4,6 +4,9 @@ import Meta from '../components/Meta'
 import ReactStars from 'react-rating-stars-component'
 import ProductCard from "../components/ProductCard"
 import Color from '../components/Color'
+import Container from '../components/Container'
+import CustomInput from '../components/CustomInput'
+
 
 
 const OurStore = () => {
@@ -12,8 +15,7 @@ const OurStore = () => {
     <>
         <Meta title={"Mağaza"} />
         <BreadCrumb title="Mağaza"/>
-        <div className='store-wrapper home-wrapper-2 py-5'>
-          <div className='container-xxl'>
+        <Container class1='store-wrapper home-wrapper-2 py-5'>
             <div className='row'>
               <div className="col-3">
                 <div className='filter-card mb-3'>
@@ -33,6 +35,7 @@ const OurStore = () => {
                   <h5 className="sub-title">Bulunma Durumu</h5>
                   <div>
                   <div className='form-check'>
+
                     <input className="form-check-input" type="checkbox" value="" id=""/>
                     <label className="form-check-label" htmlFor="">
                       Stokta Var(1)
@@ -49,11 +52,11 @@ const OurStore = () => {
                     <div className='d-flex align-items-center gap-10'>
                       <div className="form-floating">
                         <input type="email" className='form-control py-1' id="floatingInput" placeholder='En Az'/>
-                        <label for="floatingInput">En Az</label>
+                        <label htmlFor="floatingInput">En Az</label>
                       </div>
                       <div className="form-floating">
                         <input type="email" className='form-control' id="floatingInput" placeholder='En Fazla'/>
-                        <label for="floatingInput">En Fazla</label>
+                        <label htmlFor="floatingInput">En Fazla</label>
                       </div>
                     </div>
                   <h5 className="sub-title">Renk</h5>
@@ -153,7 +156,7 @@ const OurStore = () => {
                       <p className='mb-0 d-block' style={{width:"100px"}}>Sort By:</p>
                       <select name='' className='form-control form-select' id=''>
                           <option value="manual">Featured</option>
-                          <option value="best-selling" selected="selected">
+                          <option value="best-selling">
                             Best selling
                           </option>
                           <option value="title-ascending">
@@ -193,8 +196,7 @@ const OurStore = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+        </Container>
     </>
   );
 
